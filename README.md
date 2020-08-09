@@ -12,4 +12,6 @@
         - [fromIterable](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFromIterable.java)
         - [repeat](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFromRepeat.java)
         - [range](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoRange.java)
-}
+        - [empty](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoEmpty.java)
+        - [repeatWhen](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoRepeatWhen.java)
+        - [interval](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoInterval.java)

@@ -28,7 +28,4 @@ class Person {
 
 fun main() {
     Person("张三", false)
-    val a = 0.0F
-    val f = a / 0.0F
-    println(f)
 }

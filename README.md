@@ -18,6 +18,6 @@
 
 ## kotlin
 
--- 基本语法
+- 基本语法
     - 类
         -- [Kotlin 的 constructor 与 init 初始化的顺序](/src/main/kotlin/top/mcwebsite/kotlin/demo/base/InitOrder.kt)

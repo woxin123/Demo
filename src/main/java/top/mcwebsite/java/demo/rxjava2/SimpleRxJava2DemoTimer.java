@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SimpleRxJava2DemoTimer {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Observable.timer(1, TimeUnit.SECONDS)
                 .subscribe(new Observer<Object>() {
 
@@ -50,6 +50,8 @@ public class SimpleRxJava2DemoTimer {
                         System.out.println("onComplete");
                     }
                 });
+
+        Thread.sleep(10000);
     }
 
 }

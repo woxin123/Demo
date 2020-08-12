@@ -10,6 +10,7 @@
         - [just](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoJust.java)
         - [fromArray](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFromArray.java)
         - [fromIterable](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFromIterable.java)
+        - [fromCallable](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFromCallable.java)
         - [repeat](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFromRepeat.java)
         - [range](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoRange.java)
         - [empty](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoEmpty.java)
@@ -18,6 +19,12 @@
         - [never](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoNever.java)
         - [error](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoError.java)
         - [defer](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoDefer.java)
+        - [map](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoMap.java)
+        - [cast](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoCast.java)
+        - [flatMap](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFlatMap.java)
+        - [concatMap](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoConcatMap.java)       
+        - [flatMapIterable](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFlatMapIterable.java)       
+        
 ## kotlin
 
 - 基本语法

@@ -17,6 +17,7 @@
         - [interval](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoInterval.java)
         - [never](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoNever.java)
         - [error](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoError.java)
+        - [defer](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoDefer.java)
 ## kotlin
 
 - 基本语法

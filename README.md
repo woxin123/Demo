@@ -15,7 +15,8 @@
         - [empty](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoEmpty.java)
         - [repeatWhen](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoRepeatWhen.java)
         - [interval](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoInterval.java)
-
+        - [never](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoNever.java)
+        - [error](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoError.java)
 ## kotlin
 
 - 基本语法

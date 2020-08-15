@@ -24,6 +24,10 @@
         - [flatMap](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFlatMap.java)
         - [concatMap](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoConcatMap.java)       
         - [flatMapIterable](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoFlatMapIterable.java)       
+        - [buffer](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoBuffer.java)
+        - [groupBy](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoGroupby.java)
+        - [scan](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoScan.java)
+        - [window](src/main/java/top/mcwebsite/java/demo/rxjava2/SimpleRxJava2DemoWindow.java)
         
 ## kotlin
 

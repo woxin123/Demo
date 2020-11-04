@@ -1,0 +1,31 @@
+@startuml
+
+interface Continuation
+abstract SuspendLambda {
+    invokeSuspend()
+}
+class SafeContinuation {
+    delegate: Continuation
+}
+
+class LogContinuation {
+    continuation: Continuation
+}
+
+class anonymous {
+    invokeSuspend()
+}
+
+class suspend_lambda {
+
+}
+
+SuspendLambda -up-> Continuation
+SafeContinuation -up-> Continuation
+LogContinuation -up-> Continuation
+LogContinuation -down-* SafeContinuation
+anonymous -up-> SuspendLambda
+anonymous -down-* LogContinuation
+suspend_lambda -down-* anonymous
+
+@enduml

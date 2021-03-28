@@ -1,6 +1,5 @@
 package top.mcwebsite.kotlin.demo.base.function
 
-import sun.jvm.hotspot.debugger.LongHashMap
 
 private object Case1 {
     fun factorial(n: Long): Long {

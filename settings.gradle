@@ -1,3 +1,4 @@
 rootProject.name = 'Demo'
 include 'kotlin-coroutine'
+include 'kotlin:KtorSample'
 

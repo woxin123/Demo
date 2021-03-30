@@ -10,13 +10,13 @@ import io.ktor.server.netty.*
 
 
 suspend fun main() {
-    embeddedServer(Netty, 8000) {
+    embeddedServer(Netty, 8080) {
         install(ContentNegotiation) {
             serialization()
         }
         routing {
             get("/hello") {
-                call.respond("Hello Ktor!")
+                call.respond("Hello Ktor!\n")
             }
         }
     }.start(true)

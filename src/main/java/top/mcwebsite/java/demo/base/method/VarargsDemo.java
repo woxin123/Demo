@@ -10,7 +10,7 @@ public class VarargsDemo {
         prints("Hello", " ", "World", "\n");
         // 传递数组
         Integer[] integers = new Integer[]{1, 2, 3};
-        prints(integers);
+        prints((Object[]) integers);
         System.out.println();
         // 传递数组 基本类型
         int[] nIntegers = new int[]{1, 2, 3};

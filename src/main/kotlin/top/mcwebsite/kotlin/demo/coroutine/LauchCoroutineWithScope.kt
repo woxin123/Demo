@@ -1,6 +1,5 @@
 package top.mcwebsite.kotlin.demo.coroutine
 
-import jdk.nashorn.internal.ir.ContinueNode
 import top.mcwebsite.kotlin.demo.coroutine.util.executor.delay
 import top.mcwebsite.kotlin.demo.coroutine.util.executor.delayExecutor
 import java.util.concurrent.TimeUnit

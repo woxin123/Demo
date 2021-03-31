@@ -1,6 +1,5 @@
 package top.mcwebsite.java.demo.base.annotion
 
-import com.sun.xml.internal.fastinfoset.util.StringArray
 
 /**
  * 不同于 Java 的 @Deprecated 注解，Kotlin 为我们提供了 replaceWith 属性，能够方便的帮助我们进行一键替换

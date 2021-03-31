@@ -1,11 +1,11 @@
-package top.mcwebsite.kotlin.demo.coroutine
+package top.mcwebsite.kotlin.demo.coroutine.channel
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-suspend fun useChannle() {
+suspend fun useChannel() {
     val channel = Channel<Int>()
     val producer = GlobalScope.launch {
         var i = 0
@@ -24,4 +24,25 @@ suspend fun useChannle() {
 
     producer.join()
     consumer.join()
+}
+
+suspend fun sequences() {
+
+    val sequence = sequence {
+        println("A")
+        yield(1)
+        println("B")
+        yield(2)
+        println("Done")
+    }
+
+    println("before sequence")
+
+    for (item in sequence) {
+        println("Got $item")
+    }
+}
+
+suspend fun main() {
+    sequences()
 }

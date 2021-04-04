@@ -4,6 +4,7 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
 import org.jetbrains.annotations.NotNull;
+import top.mcwebsite.kotlin.demo.coroutine.base.SuspendFunctionKt;
 
 public class UseJavaCallKotlinSuspend {
 

@@ -1,9 +1,21 @@
-package top.mcwebsite.kotlin.demo.coroutine
+package top.mcwebsite.kotlin.demo.coroutine.base
 
-import kotlin.coroutines.Continuation
-import kotlin.coroutines.ContinuationInterceptor
-import kotlin.coroutines.CoroutineContext
-import kotlin.coroutines.startCoroutine
+import kotlin.coroutines.*
+
+fun main() {
+    suspend {
+        notSuspend()
+        suspendFunc02("Hello", "Coroutine")
+    }.startCoroutine(object : Continuation<Int> {
+        override val context: CoroutineContext
+            get() = LogInterceptor()
+
+        override fun resumeWith(result: Result<Int>) {
+            result.getOrThrow()
+        }
+    })
+}
+
 
 class LogInterceptor : ContinuationInterceptor {
     override val key: CoroutineContext.Key<*>
@@ -22,18 +34,4 @@ class LogContinuation<T>(private val continuation: Continuation<T>)
         continuation.resumeWith(result)
         println("after resumeWith.")
     }
-}
-
-fun main() {
-    suspend {
-        suspendFunc02("Hello", "Hello1")
-        suspendFunc02("Hello", "Hello2")
-    }.startCoroutine(object : Continuation<Int> {
-        override val context: CoroutineContext = LogInterceptor()
-
-        override fun resumeWith(result: Result<Int>) {
-            result.getOrThrow()
-        }
-
-    })
 }

@@ -1,2 +1,5 @@
-package top.mcwebsite.java.demo.proxy;public class TraceHandler {
+package top.mcwebsite.java.demo.proxy;
+
+public class TraceHandler {
+
 }

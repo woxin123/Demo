@@ -1,4 +1,4 @@
-package top.mcwebsite.kotlin.demo.coroutine
+package top.mcwebsite.kotlin.demo.coroutine.base
 
 import kotlin.coroutines.*
 
@@ -15,11 +15,11 @@ import kotlin.coroutines.*
  */
 fun main() {
     val continuation = suspend {
-        println("In Coroutine.")
-        5
-    }.createCoroutine(object : Continuation<Int> {
-        override fun resumeWith(result: Result<Int>) {
-            println("Coroutine End: $result")
+        println("协程执行中...")
+        "协程的返回值"
+    }.createCoroutine(object : Continuation<String> {
+        override fun resumeWith(result: Result<String>) {
+            println("协程执行结束: $result")
         }
 
         override val context: CoroutineContext = EmptyCoroutineContext

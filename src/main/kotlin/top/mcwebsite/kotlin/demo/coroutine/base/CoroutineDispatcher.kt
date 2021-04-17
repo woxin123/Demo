@@ -1,11 +1,13 @@
 package top.mcwebsite.kotlin.demo.coroutine.base
 
+import kotlin.concurrent.thread
 import kotlin.coroutines.*
 
 fun main() {
     suspend {
-        notSuspend()
-        suspendFunc02("Hello", "Coroutine")
+        suspendFunctionB()
+        suspendFunctionB()
+        123
     }.startCoroutine(object : Continuation<Int> {
         override val context: CoroutineContext
             get() = LogInterceptor()
@@ -15,6 +17,8 @@ fun main() {
         }
     })
 }
+
+
 
 
 class LogInterceptor : ContinuationInterceptor {

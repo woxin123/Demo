@@ -27,4 +27,31 @@ fun main() {
     })
 
     continuation.resume(Unit)
+
+    createCoroutineWithScope()
+}
+
+fun createCoroutineWithScope() {
+
+    class SimpleCoroutineScope {
+        val say = "我是一个简单的作用域"
+    }
+
+    fun <R, T> launchCoroutine(receiver: R, block: suspend R.() -> T) {
+        block.createCoroutine(receiver, object : Continuation<T> {
+            override val context: CoroutineContext
+                get() = EmptyCoroutineContext
+
+            override fun resumeWith(result: Result<T>) {
+                println("协程执行结束了. $result")
+            }
+
+        }).resume(Unit)
+    }
+
+    launchCoroutine(SimpleCoroutineScope()) {
+        println("协程开始执行了...")
+        println(say)
+        "协程的返回值"
+    }
 }

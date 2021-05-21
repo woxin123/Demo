@@ -1,4 +1,4 @@
-package top.mcwebsite.kotlin.demo.coroutine
+package top.mcwebsite.kotlin.demo.coroutine.base
 
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch

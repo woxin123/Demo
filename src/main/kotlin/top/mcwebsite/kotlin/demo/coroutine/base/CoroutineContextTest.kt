@@ -1,4 +1,4 @@
-package top.mcwebsite.kotlin.demo.coroutine
+package top.mcwebsite.kotlin.demo.coroutine.base
 
 import java.lang.ArithmeticException
 import kotlin.coroutines.*
@@ -20,7 +20,7 @@ class CoroutineMessage(var message: String): AbstractCoroutineContextElement(Key
     }
 }
 
-class CoroutineExceptionHandler(val onErrorAction: (Throwable) -> Unit)
+class CoroutineExceptionHandler(private val onErrorAction: (Throwable) -> Unit)
     : AbstractCoroutineContextElement(Key) {
     companion object Key: CoroutineContext.Key<CoroutineExceptionHandler>
 
@@ -31,31 +31,23 @@ class CoroutineExceptionHandler(val onErrorAction: (Throwable) -> Unit)
 }
 
 fun main() {
-    var list: List<Int> = emptyList()
-    list += 0
-    list += listOf(1, 2, 3)
-
     var coroutineContext: CoroutineContext = EmptyCoroutineContext
-    coroutineContext += CoroutineName("co-01")
+    coroutineContext += CoroutineName("简单的协程名")
     coroutineContext += CoroutineExceptionHandler {
-        print(it)
+        println("呀！出错了，${it.cause}")
     }
-
-    var nContext: CoroutineContext = CoroutineMessage("abcd")
-    nContext += coroutineContext
-    var a = 1 + 1
     suspend {
-        println("In Coroutine [${coroutineContext[CoroutineName]}].")
+        println("协程执行中... 协程名为: [${coroutineContext[CoroutineName]}].")
         throw ArithmeticException()
-        100
-    }.startCoroutine(object : Continuation<Int> {
+        "协程执行结束"
+    }.startCoroutine(object : Continuation<String> {
         override val context: CoroutineContext = coroutineContext
 
-        override fun resumeWith(result: Result<Int>) {
+        override fun resumeWith(result: Result<String>) {
             result.onFailure {
                 context[CoroutineExceptionHandler]?.onError(it)
             }.onSuccess {
-                println("Result $it")
+                println("协程执行成功了!")
             }
         }
     })

@@ -1,6 +1,5 @@
 package top.mcwebsite.kotlin.demo.coroutine
 
-import top.mcwebsite.kotlin.demo.coroutine.util.executor.delay
 import top.mcwebsite.kotlin.demo.coroutine.util.executor.delayExecutor
 import java.util.concurrent.TimeUnit
 import kotlin.coroutines.*

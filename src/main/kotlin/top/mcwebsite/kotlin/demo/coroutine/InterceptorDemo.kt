@@ -1,9 +1,7 @@
 package top.mcwebsite.kotlin.demo.coroutine
 
-import kotlin.coroutines.Continuation
-import kotlin.coroutines.ContinuationInterceptor
-import kotlin.coroutines.CoroutineContext
-import kotlin.coroutines.startCoroutine
+import kotlin.concurrent.thread
+import kotlin.coroutines.*
 
 class LogInterceptor : ContinuationInterceptor {
     override val key: CoroutineContext.Key<*>
@@ -21,6 +19,14 @@ class LogContinuation<T>(private val continuation: Continuation<T>)
         println("before resumeWith: $result")
         continuation.resumeWith(result)
         println("after resumeWith.")
+    }
+}
+
+suspend fun suspendFunc02(a: String, b: String)
+        = suspendCoroutine<Int> { continuation ->
+    thread {
+        println(a + b)
+        continuation.resumeWith(Result.success(5))
     }
 }
 

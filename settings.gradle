@@ -2,4 +2,6 @@ rootProject.name = 'Demo'
 include 'kotlin-coroutine'
 include 'kotlin:KtorSample'
 include 'handler-demo'
+include 'android:handler'
+findProject(':android:handler')?.name = 'handler'
 

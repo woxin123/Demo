@@ -4,4 +4,10 @@ include 'kotlin:KtorSample'
 include 'handler-demo'
 include 'android:handler'
 findProject(':android:handler')?.name = 'handler'
+include 'kotlin:Concurrent'
+findProject(':kotlin:Concurrent')?.name = 'Concurrent'
+
+enableFeaturePreview("VERSION_CATALOGS")
+include 'kotlin:FlowSample'
+findProject(':kotlin:FlowSample')?.name = 'FlowSample'
 

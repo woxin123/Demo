@@ -11,3 +11,9 @@ class ScrollerView @JvmOverloads constructor(
 ): View(context, attrs, defStyle) {
     // ...
 }
+
+fun main() {
+
+    ScrollerView(Context())
+
+}

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class UseJavaCallKotlinSuspend {
 
     public static void main(String[] args) throws InterruptedException {
-        Object result = SuspendFunctionKt.suspendFunc02("a", "b", new Continuation<Integer>() {
+        Object result = CoroutineDispatcherKt.suspendFunc02("a", "b", new Continuation<Integer>() {
             @NotNull
             @Override
             public CoroutineContext getContext() {

@@ -21,9 +21,9 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    implementation "io.reactivex.rxjava2:rxjava:2.2.19"
+    implementation libs.rxJava
     implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+    implementation libs.kotlin.coroutine
     implementation("com.bennyhuo.java:portable-android-handler:0.3")
     implementation("com.squareup.retrofit2:retrofit:2.7.0")
     implementation("com.squareup.retrofit2:converter-gson:2.7.0")

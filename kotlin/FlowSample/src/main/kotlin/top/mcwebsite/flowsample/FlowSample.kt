@@ -1,7 +1,6 @@
 package top.mcwebsite.flowsample
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 
 suspend fun simpleFlow() {
@@ -154,6 +153,27 @@ suspend fun simpleFlowTerminalReduce() {
 }
 
 
+/**
+ * launchIn
+ * launchIn
+ */
+suspend fun simpleFlowLaunchIn() {
+    println("----flow terminal launchIn-------")
+    val simpleFlow: Flow<Int> = flow {
+        for (i in 1..10) {
+            emit(i)
+            println("launchIn ${currentCoroutineContext()[CoroutineName]?.name} emit $i")
+            delay(100)
+        }
+    }
+    coroutineScope {
+        launch(CoroutineName("SimpleCoroutine")) {
+            simpleFlow.launchIn(this)
+        }
+    }
+}
+
+
 suspend fun main() {
     simpleFlow()
     simpleAsFlow()
@@ -166,4 +186,5 @@ suspend fun main() {
     simpleFlowTerminalToList()
     simpleFlowTerminalFold()
     simpleFlowTerminalReduce()
+    simpleFlowLaunchIn()
 }

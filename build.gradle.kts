@@ -25,6 +25,16 @@ dependencies {
     testCompile("junit:junit:4.12")
 }
 
+kotlin {
+    target {
+        compilations.all {
+            kotlinOptions {
+                freeCompilerArgs = freeCompilerArgs + "-Xallow-result-return-type"
+            }
+        }
+    }
+}
+
 tasks.jar {
     manifest {
         attributes(mapOf("Main-Class" to "top.mcwebsite.kotlin.demo.MainCls"))

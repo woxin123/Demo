@@ -1,9 +1,10 @@
 [versions]
 rxJava = "2.2.19"
 kotlin-coroutine = "1.4.3"
+okhttp = "4.9"
 
 [libraries]
 rxJava = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxJava"}
 kotlin-coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutine" }
-
+okhttp = { module = "com.squareup:okhttp", version.ref="okhttp" }
 [bundles]

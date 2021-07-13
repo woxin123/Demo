@@ -10,4 +10,5 @@ findProject(':kotlin:Concurrent')?.name = 'Concurrent'
 enableFeaturePreview("VERSION_CATALOGS")
 include 'kotlin:FlowSample'
 findProject(':kotlin:FlowSample')?.name = 'FlowSample'
-
+include "web:okhttp-demo"
+findProject(":web:okhttp-demo")?.name = "okhttp-demo"

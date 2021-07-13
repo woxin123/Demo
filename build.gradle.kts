@@ -35,15 +35,15 @@ kotlin {
     }
 }
 
-tasks.jar {
-    manifest {
-        attributes(mapOf("Main-Class" to "top.mcwebsite.kotlin.demo.MainCls"))
-    }
-    from(configurations.runtimeClasspath.get().map {
-        if (it.isDirectory) {
-            it
-        } else {
-            zipTree(it)
-        }
-    })
-}
+// tasks.jar {
+//     manifest {
+//         attributes(mapOf("Main-Class" to "top.mcwebsite.kotlin.demo.MainCls"))
+//     }
+//     from(configurations.runtimeClasspath.get().map {
+//         if (it.isDirectory) {
+//             it
+//         } else {
+//             zipTree(it)
+//         }
+//     })
+// }

@@ -11,5 +11,5 @@ repositories {
 
 dependencies {
     implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlin.coroutine)
+    implementation(libs.okhttp)
 }

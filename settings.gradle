@@ -1,4 +1,7 @@
 rootProject.name = 'Demo'
+enableFeaturePreview("VERSION_CATALOGS")
+
+
 include 'kotlin-coroutine'
 include 'kotlin:KtorSample'
 include 'handler-demo'
@@ -7,7 +10,7 @@ findProject(':android:handler')?.name = 'handler'
 include 'kotlin:Concurrent'
 findProject(':kotlin:Concurrent')?.name = 'Concurrent'
 
-enableFeaturePreview("VERSION_CATALOGS")
+
 include 'kotlin:FlowSample'
 findProject(':kotlin:FlowSample')?.name = 'FlowSample'
 include "web:okhttp-demo"

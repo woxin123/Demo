@@ -1,6 +1,6 @@
 plugins {
     java
-    kotlin("jvm") version "1.4.30"
+    kotlin("jvm") version "1.5.21"
 }
 
 group = "org.example"
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    implementation(libs.kotlin.stdlib)
     implementation(libs.kotlin.coroutine)
     implementation(libs.rxJava)
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10")
@@ -22,7 +22,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.7.0")
     implementation("com.squareup.okhttp3:logging-interceptor:3.14.2")
     implementation("junit:junit:4.12")
-    testCompile("junit:junit:4.12")
+    testImplementation("junit:junit:4.12")
 }
 
 kotlin {

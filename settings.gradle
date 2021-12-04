@@ -7,8 +7,7 @@ include 'kotlin:KtorSample'
 include 'handler-demo'
 include 'android:handler'
 findProject(':android:handler')?.name = 'handler'
-include 'kotlin:Concurrent'
-findProject(':kotlin:Concurrent')?.name = 'Concurrent'
+include 'concurrent'
 
 
 include 'kotlin:FlowSample'

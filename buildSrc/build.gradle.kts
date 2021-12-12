@@ -1,5 +1,6 @@
 plugins {
     `kotlin-dsl`
+    `java-gradle-plugin`
 }
 
 group = "org.example"
@@ -10,4 +11,13 @@ repositories {
 }
 
 dependencies {
+}
+
+gradlePlugin {
+    plugins {
+        create("simplePlugin") {
+            id = "top.mcwebsite.gradle.customPlugin"
+            implementationClass = "top.mcwebsite.gradle.customPlugin.GreetingPlugin"
+        }
+    }
 }

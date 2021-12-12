@@ -1,6 +1,7 @@
 plugins {
     java
     kotlin("jvm") version "1.5.21"
+    id("top.mcwebsite.gradle.customPlugin")
 }
 
 group = "org.example"

@@ -4,4 +4,4 @@ out/*
 build/*
 **/build
 **/out
-/buildSrc/.gradle/
+/buildSrc/.gradle/*

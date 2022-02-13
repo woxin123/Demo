@@ -9,8 +9,28 @@ version = "1.0-SNAPSHOT"
 
 
 
+team {
+    register("xiaoming") {
+        age = 18
+        isMale = false
+    }
+
+    register("xiaohong") {
+        age = 18
+        isMale = true
+    }
+}
+
+myExtension {
+    foo = "aaaadddd"
+    inner {
+        str = "test"
+    }
+}
+
 repositories {
     maven(url = "https://maven.aliyun.com/repository/public")
+    google()
 }
 
 dependencies {
